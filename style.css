@@ -1,178 +1,117 @@
-/* Global reset */
-* {
+/* ===== Global Page Styling ===== */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://i.imgur.com/E6x8k0M.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
 }
 
-body {
-    background: #f6f7fb;
-    color: #222;
+/* Add a subtle dark overlay so text can be read */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: -1;
 }
 
-/* Navbar */
+/* ===== Navbar ===== */
 nav {
+    background: rgba(10, 10, 25, 0.8);
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 40px;
-    background: #0b1220; /* midnight */
-    color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
 }
 
-nav h1 {
-    font-size: 26px;
-    letter-spacing: 1px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-nav ul li a {
-    color: #d9d9e8; /* soft moon color */
+nav a {
+    color: #c7b4ff;
+    margin-left: 25px;
     text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-shadow: 0 0 10px #8f4fff, 0 0 20px #8f4fff;
+    transition: 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: white;
-    text-shadow: 0 0 6px #ffffffaa;
+nav a:hover {
+    color: #a5ddff;
+    text-shadow: 0 0 15px #70d0ff, 0 0 25px #70d0ff;
 }
 
-/* Hero Section */
-.hero {
-    background: url('images/hero.jpg') center/cover no-repeat;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+nav .logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #d8c2ff;
+    text-shadow: 0 0 10px #b36bff, 0 0 25px #b36bff;
+}
+
+/* ===== Page Sections ===== */
+section {
     text-align: center;
-    color: white;
-    padding: 20px;
+    padding: 80px 200px;
 }
 
-.hero-text h2 {
-    font-size: 48px;
-    text-shadow: 0 0 10px rgba(0,0,0,0.4);
+/* Headings with glow */
+h1, h2 {
+    color: #e3d4ff;
+    text-shadow: 0 0 12px #a560ff, 0 0 25px #864fff;
 }
 
-.hero-text p {
-    margin-top: 10px;
-    font-size: 20px;
+/* Paragraphs */
+p {
+    font-size: 1.1rem;
+    color: #d4e6ff;
+    text-shadow: 0 0 6px #5bb8ff;
 }
 
-.hero button {
-    margin-top: 25px;
-    padding: 12px 25px;
-    background: #ffffffcc;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s ease;
+/* Lists */
+ul {
+    list-style-type: disc;
+    font-size: 1.1rem;
+    color: #d8e0ff;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+
 }
 
-.hero button:hover {
-    background: white;
-    transform: scale(1.05);
+ul li {
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px #8bd0ff;
 }
 
-/* Menu Section */
-#menu {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#menu h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-.menu-items {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.item {
-    width: 250px;
-    background: white;
+/* ===== Contact Page ===== */
+.contact-info {
+    background: rgba(20, 20, 40, 0.7);
+    padding: 30px;
     border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
+    width: fit-content;
+    margin: auto;
+    box-shadow: 0 0 15px #794fff, 0 0 30px #5f3bff;
+    backdrop-filter: blur(6px);
 }
 
-.item:hover {
-    transform: translateY(-5px);
-}
-
-.item img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.item h3 {
-    margin-top: 10px;
-    font-size: 20px;
-}
-
-.item p {
-    color: #333;
-    margin-top: 5px;
-}
-
-/* About Page */
-.about-section {
-    max-width: 800px;
-    margin: 40px auto;
-    text-align: center;
-    padding: 20px;
-}
-
-.about-section h2 {
+.contact-info h2 {
     margin-bottom: 15px;
 }
 
-.about-section ul {
-    margin-top: 20px;
-    text-align: left;
-    display: inline-block;
-    line-height: 1.7;
+.contact-info p {
+    margin: 6px 0;
+    font-size: 1.1rem;
 }
 
-/* Contact Page */
-.contact-section {
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 20px;
+/* ===== Footer ===== */
+footer {
     text-align: center;
-}
-
-.contact-section h2 {
-    margin-bottom: 10px;
-}
-
-/* Contact card */
-.contact-card {
-    background: white;
     padding: 20px;
-    max-width: 350px;
-    margin: 25px auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.contact-card p {
-    margin: 7px 0;
-    font-size: 16px;
+    color: #c9b8ff;
+    background: rgba(20, 20, 40, 0.7);
+    text-shadow: 0 0 7px #a56bff;
 }
