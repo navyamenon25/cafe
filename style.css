@@ -4,7 +4,7 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
 
-    /* New stable background image */
+    /* Background image */
     background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1950&q=80') 
                 no-repeat center center fixed;
     background-size: cover;
@@ -31,9 +31,23 @@ nav {
     backdrop-filter: blur(8px);
 }
 
+nav h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e8d8ff;
+    text-shadow: 0 0 12px #bf77ff, 0 0 25px #a860ff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
 nav a {
     color: #d5c4ff;
-    margin-left: 25px;
     text-decoration: none;
     font-size: 1.15rem;
     font-weight: 500;
@@ -41,16 +55,10 @@ nav a {
     transition: 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
     color: #bdeaff;
     text-shadow: 0 0 15px #7cd2ff, 0 0 25px #7cd2ff;
-}
-
-nav .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #e8d8ff;
-    text-shadow: 0 0 12px #bf77ff, 0 0 25px #a860ff;
 }
 
 /* ===== Page Sections ===== */
@@ -76,23 +84,70 @@ p {
     line-height: 1.6;
 }
 
-/* Lists */
-ul {
-    list-style-type: disc;
-    font-size: 1.1rem;
-    color: #e4eaff;
-    max-width: 700px;
-    margin: 25px auto;
-    text-align: left;
-    padding-left: 20px;
+/* ===== HERO SECTION ===== */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-ul li {
+.hero-text h2 {
+    font-size: 2.8rem;
     margin-bottom: 10px;
-    text-shadow: 0 0 8px #8bd0ff;
+    text-shadow: 0 0 12px #b36bff;
 }
 
-/* ===== Contact Page ===== */
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(120, 80, 255, 0.9);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 0 15px #8f4fff;
+    transition: 0.2s;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #a96fff;
+}
+
+/* ===== MENU SECTION ===== */
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: rgba(25,25,40,0.7);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 0 15px #7549ff;
+}
+
+.item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* ===== Contact Page Box ===== */
 .contact-info {
     background: rgba(20, 20, 40, 0.7);
     padding: 30px 40px;
@@ -117,3 +172,4 @@ footer {
     text-shadow: 0 0 7px #a56bff;
     margin-top: 50px;
 }
+
